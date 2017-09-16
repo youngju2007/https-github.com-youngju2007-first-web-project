@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko"> 
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=1100" />
+<meta name="author" content="영주 인터내셔널 이 덕란" />
+<meta name="apple-mobile-web-app-title" content="YOUNGJU" />
+<meta name="description" content="영주 인터내셔널 웹사이트입니다." />
+<title>영주 인터내셔널</title>
+    <link rel="     " type="image/" href="       이미지로고경로 " */>
+<link rel="stylesheet" href="fa/css/font-awesome.min.css" />
+<link rel="stylesheet" href="style.css"/>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body id="wrapper">
+    <div id="header">
+            <div id="header-top">
+                          
+               <ul id="nav">
+                       <li><a href="#">WHEN</a></li>
+                        <li><a href="#">WHERE</a></li>
+                        <li><a href="#"><img alt="" src="img/lo_lo.jpg"/> </a></li>
+               </ul>
+            </div>
+           <div id="logo">
+            <h1><img alt="logo" src="img/crown_layer.png"/></h1>
+           </div>  
+           
+           <div id="yj-logo">
+               <img alt="logo co" src="img/yj_logo.png"/> 
+           </div><!--header-top-->
+     </div><!--header-->           
+        <div id="header-bottom">
+                <ul id="gnb">
+                         <li>
+                         <a href="#">COURSE 1 FRANCE</a>
+                            <ul>
+                            <li><a href="#">PARIS</a></li>
+                            <li><a href="#">PARIS</a></li>
+                            </ul>
+                          </li>  
+                          <li>
+                          <a href="#">COURSE 2 SPAIN</a>
+                            <ul>
+                            <li><a href="#">Barucelona</a></li>
+                            <li><a href="#">Barucelona</a></li>
+                            </ul>
+                         </li>   
+                         <li>
+                         <a href="#">COURSE 3 ITALY</a>
+                            <ul>
+                            <li><a href="#">ROMA</a></li>
+                            <li><a href="#">ROMA</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <a href="#">COURSE 4 ENGLAND</a>                                
+                              <ul>
+                              <li><a href="#">RONDON</a></li>
+                              <li><a href="#">RONDON</a></li>
+                              </ul> 
+                          </li>
+                          <li>
+                           <a href="#">COURSE 5 SWISS</a>
+                            <ul>  
+                            <li><a href="#">GENEVA</a></li>
+                            <li><a href="#">GENEVA</a></li>
+                            </ul>
+                          </li>    
+                </ul>
+             </div> <!--bottom-->
+   
+       <div id="main">
+           
+              <ul class="image">
+                <li><img alt="이태리 로마 바티칸 시국 "
+                                  src="img/main_roma_ba_01.jpeg"/></li>
+                <li><img alt=" 스페인 " 
+                                  src="img/main_spain_02.jpg "/></li>
+                <li><img alt=" 영국 런던" 
+                                  src="img/main_eng_03.jpg" /></li>
+              </ul>
+            <ul class="indicator"> 
+                <li class="on"><a href="#">1번이미지보기</a></li>
+                <li><a href="#">2번이미지보기</a></li>
+                <li><a href="#">3번이미지보기</a></li>
+            </ul>
+        
+        </div><!--main-->
+                             
+        <footer>
+            <h2>YoungJu International </h2>
+            <address>LG Village Gueomgok-Dong Suwon, Korea </address>
+            <p class="copyright">Copyright (C) YoungJu International,
+                All Rights Reserved.</p>
+        </footer>
+    
+<script>
+  
+
+ $('#gnb > li > a').on('mouseenter focus', function() { 
+    
+          // $('#gnb ul').css({'display': 'block'});
+    
+   $('#gnb ul').css({'display':'none'});
+   $(this).next().css({'display': 'block'});
+   $('#header').addclass('on');
+    });
+    
+    
+$('#header').on('mouseleave', function() {
+   $('#gnb  ul').css({'display': 'none'});
+   $('#header').removeClass('on');
+ });
+ 
+    
+imageSlide('#main');
+function imageSlide(selector) {
+    $(selector).find('ul.indicator li a').on('click', function() {
+        var index = $(selector).find('ul.indicator li').index($(this).parent());
+        //alert(index);
+        $(selector).find('ul.image li').css({'display': 'none'});
+        $(selector).find('ul.image li:eq(' + index + ')').css({'display': 'block'});
+        $(selector).find('ul.indicator li').removeClass('on');
+        $(selector).find('ul.indicator li:eq(' + index + ')').addClass('on');
+    });
+}
+
+</script>
+ </body>
+</html>
+
+    
