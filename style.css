@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+/* web font */
+@font-face {
+    font-family: NanumGothic;
+    src: url(../font/NanumGothic.eot); /*IE9 호환성 보기*/
+    src: local("☺"),
+        url(../font/NanumGothic.eot?#iefix) format('embedded-opentype'), /*IE 6-8*/
+        url(../font/NanumGothic.woff) format('woff'); /*표준 브라우저*/
+        /*url(../font/NanumBarunGothic.ttf) format('truetype');  /*트루타입 브라우저*/
+}
+
+/* reset */
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, th, td, form, fieldset, button {margin: 0; padding: 0;}
+a{text-decoration: inherit;}
+li {list-style: none;}
+li {text-decoration :none;}
+
+#wrapper { }
+#header{   position: relative; }
+#header-top{background-color:rgba(15, 15, 159, 0.58);margin: 0 auto; padding: 0; height: 40px; width:100%;}
+    
+#header-top{display: block;  }
+#header-top #nav{position:absolute; right: 0; float:left; padding-right: 300px;
+                 padding-top: 10px; }
+                  
+#header-top #nav li { float:left; font-size: 16px; text-decoration: none; 
+                       font-weight:bold; margin-left: 40px;  }
+                      
+#header-top #nav li a {width: 150px;  text-align: center;}
+                    
+#header-top #nav li:last-child{width:40px; height: 40px; background: url("img/lo_lo.jpg") ;}
+                                
+
+#logo {width:100px; height: 100px;  background-size:100%;  display: block;
+       margin: 0 auto;  position:relative;  background: url("img/crown_layer.png"/) ;
+       padding-top: 20px;  padding-bottom: 15px; }
+
+#yj-logo{ width:400px; height:60px;  background: url("img/yj_logo.png"/);  display: block; 
+          position:absolute;  background-size:100%; margin-left:0px; top:120px;
+          }
+        
+
+/*header-bottom:before {content: ""; display: block; width: 100%;   bottom: 42px; }
+*/
+
+#header-bottom {position: relative;  background-color: rgba(196, 141, 16, 0.42); margin: 0 auto; }
+
+
+#header-bottom #gnb {height: 50px; width:100%;  display: block; position:relative; }
+#header-bottom #gnb li   {position:relative; float:left;  width:280px;  right: 0;  height:50px; }
+#header-bottom #gnb li a{  display:block;    padding-top:12px; padding-bottom: 12px;
+                         margin:0  auto; text-align: center; font-size:18px; font-weight: bold; color:darkblue;}
+#header-bottom #gnb li a:hover{color:blue;} 
+
+#gnb ul {position: absolute; top: 57px; display: none; z-index: 10;}
+#header-bottom #gnb > li  ul { background-color:rgba(28, 50, 217, 0.38);   border: 1px solid rgba(38, 138, 239, 0.35); }
+#header-bottom #gnb > li  ul li{border:1px solid rgba(38, 138, 239, 0.35); }                                                                    
+#header-bottom #gnb > ul li a {padding:0;   font-size:18px; width:120px;  text-align: center; 
+                                   color: rgba(138, 141, 121, 0.92);       }
+                                                        
+#header-bottom #gnb ul li a:hover{color:cyan;  }                                 
+
+
+body #main { background: rgba(188, 188, 221, 0.31); position:relative; top: 30px; height:500px; overflow: hidden;  } 
+
+body #main ul.image li { position:absolute; top:0; margin-left: 160px;   display:none; }
+                                                                         
+body #main ul.image li:first-child {display: block;}
+
+body #main ul.indicator{position:absolute; left:0; bottom:40px; width:100%; text-align: center;                                          display: inline-block; margin-left: 7px;}
+body #main ul.indicator li  {display: inline-block; margin-left:40px; 
+                             border: 8  8px solid rgba(7, 7, 56, 0.31); }
+   
+body #main ul.indicator li a{ display: block; width:40px;  height: 40px; background: url("img/main_indicator.jpeg") center center no-repeat; text-indent:-9999px;  overflow: hidden; }
+ 
+footer{width: 1000px; height:120px;  text-align: center;
+    
+     margin:0 auto; top:60px;  position:relative;  font-size: 18px;   color:navy; 
+}
+footer address {color:navy; margin-top: 5px; font-size: 10px;}
+footer p {margin-top:10px;  font-size: 8px;}
+
